@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Sitio Completo</title>
+    <link rel="stylesheet" href="assets/Css/style.css">
+</head>
+<body>
+    <!-- Navegación -->
+    <header id="header">
+        <nav>
+            <a href="#inicio" class="logo">MiSitio</a>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#galeria">Galería</a></li>
+                <li><button id="btnContacto" class="btn-link">Contacto</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sección Hero -->
+    <section id="inicio" class="hero">
+        <div class="container">
+            <h1>Creatividad Digital</h1>
+            <p>Soluciones visuales para tu marca</p>
+            <div class="hero-buttons">
+                <a href="#galeria" class="btn">Ver Trabajos</a>
+                <button id="btnHeroContacto" class="btn-outline">Contactar</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Servicios -->
+    <section class="servicios container">
+        <h2>Nuestro Expertise</h2>
+        <div class="grid-servicios">
+            <article>
+                <img src="https://source.unsplash.com/random/300x200/?web-design" alt="Diseño Web">
+                <h3>Diseño Web</h3>
+                <p>Sitios a medida con enfoque mobile-first.</p>
+            </article>
+            <article>
+                <img src="https://source.unsplash.com/random/300x200/?branding" alt="Branding">
+                <h3>Identidad Visual</h3>
+                <p>Logotipos y manuales de marca.</p>
+            </article>
+        </div>
+    </section>
+
+    <!-- Sección Galería (Dedicada solo a imágenes) -->
+    <section id="galeria" class="galeria-section">
+        <div class="container">
+            <h2>Portafolio Visual</h2>
+            <p class="subtitle">Nuestros proyectos destacados</p>
+            
+            <div class="filtros">
+                <button class="filtro-btn active" data-categoria="todos">Todos</button>
+                <button class="filtro-btn" data-categoria="web">Web</button>
+                <button class="filtro-btn" data-categoria="branding">Branding</button>
+            </div>
+            
+            <div class="galeria">
+                <div class="galeria-item" data-categoria="web">
+                    <img src="https://source.unsplash.com/random/600x400/?website,1" alt="Proyecto Web 1">
+                    <div class="overlay">
+                        <h3>Proyecto Web</h3>
+                        <button class="btn-ver">Ampliar</button>
+                    </div>
+                </div>
+                <div class="galeria-item" data-categoria="branding">
+                    <img src="https://source.unsplash.com/random/600x400/?logo,1" alt="Proyecto Branding 1">
+                    <div class="overlay">
+                        <h3>Identidad Corporativa</h3>
+                        <button class="btn-ver">Ampliar</button>
+                    </div>
+                </div>
+                <!-- Más items... -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal de Contacto -->
+    <div id="modalContacto" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar-modal">&times;</span>
+            <h2>¡Hablemos!</h2>
+            <form id="formContacto">
+                <div class="form-group">
+                    <input type="text" placeholder="Nombre" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="Tu mensaje..." rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn">Enviar</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Lightbox para Galería -->
+    <div id="lightbox" class="lightbox">
+        <span class="cerrar-lightbox">&times;</span>
+        <img id="imagen-lightbox" src="" alt="">
+        <div class="lightbox-caption"></div>
+    </div>
+
+    <footer>
+        <p>© 2023 Mi Sitio Creativo</p>
+    </footer>
+
+    <script src="assets/Js/script.js"></script>
+</body>
+</html>
