@@ -3,18 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Sitio Completo</title>
+    <title>Mi Furturd</title>
+    <!-- Enlace al archivo CSS -->
     <link rel="stylesheet" href="assets/Css/style.css">
 </head>
 <body>
     <!-- Navegación -->
     <header id="header">
         <nav>
-            <a href="#inicio" class="logo">MiSitio</a>
+             <!-- Logo del sitio -->
+            <a href="#inicio" class="logo">Furturd</a>
             <ul>
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#galeria">Galería</a></li>
                 <li><button id="btnContacto" class="btn-link">Contacto</button></li>
+                <!-- Menú de navegación -->
             </ul>
         </nav>
     </header>
@@ -24,6 +27,7 @@
         <div class="container">
             <h1>Creatividad Digital</h1>
             <p>Soluciones visuales para tu marca</p>
+             <!-- Botones de acción -->
             <div class="hero-buttons">
                 <a href="#galeria" class="btn">Ver Trabajos</a>
                 <button id="btnHeroContacto" class="btn-outline">Contactar</button>
@@ -34,6 +38,7 @@
     <!-- Sección Servicios -->
     <section class="servicios container">
         <h2>Nuestro Expertise</h2>
+        <!-- Tarjetas de servicio -->
         <div class="grid-servicios">
             <article>
                 <img src="assets/imag/images (14).jpg"alt="Diseño Web">
@@ -42,6 +47,7 @@
             </article>
             <article>
                 <img src="assets/imag/e87d6017-c333-416c-9c7d-1897baf8d17a.avif" alt="Periodicos">
+                  <!-- ⚠️ Aquí faltaba cerrar correctamente el h3 -->
                 <h3>Identidad Informativa<h3>
                 <p>Para que sea Interactiva y Informativa .</p>
             </article>
@@ -53,13 +59,14 @@
         <div class="container">
             <h2>Portafolio Visual</h2>
             <p class="subtitle">Nuestros proyectos destacados</p>
-            
+             <!-- Filtros de categoría -->
             <div class="filtros">
                 <button class="filtro-btn active" data-categoria="todos">Todos</button>
                 <button class="filtro-btn" data-categoria="web">Web</button>
                 <button class="filtro-btn" data-categoria="Periodicos">Periodicos</button>
             </div>
-            
+
+            <!-- Imágenes de la galería -->
             <div class="galeria">
                 <div class="galeria-item" data-categoria="web">
                     <img src="assets/imag/sitio web creado.png" alt="Proyecto Web 1">
@@ -83,8 +90,10 @@
     <!-- Modal de Contacto -->
     <div id="modalContacto" class="modal">
         <div class="modal-contenido">
+             <!-- Botón para cerrar el modal -->
             <span class="cerrar-modal">&times;</span>
             <h2>¡Hablemos!</h2>
+            <!-- Formulario de contacto -->
             <form id="formContacto">
                 <div class="form-group">
                     <input type="text" placeholder="Nombre" required>
@@ -106,11 +115,11 @@
         <img id="imagen-lightbox" src="" alt="">
         <div class="lightbox-caption"></div>
     </div>
-
+<!-- FOOTER -->
     <footer>
         <p>© 2023 Mi Sitio Creativo</p>
     </footer>
-
+ <!-- Enlace al JavaScript -->
     <script src="assets/Js/script.js"></script>
 </body>
 </html>
