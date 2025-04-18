@@ -1,65 +1,80 @@
+/* -----------------------------------
+   RESET BÁSICO Y FUENTES
+------------------------------------ */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
-    scroll-behavior: smooth; /* Navegación suave */
 }
 
 body {
+    font-family: 'Segoe UI', sans-serif;
     color: #333;
     line-height: 1.6;
-   
+    background-color: #78b1e9;
 }
 
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 4rem 0;
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
-/* Header fijo */
+/* -----------------------------------
+   CABECERA Y NAVEGACIÓN
+------------------------------------ */
 header {
-    position: fixed;
-    width: 100%;
-    background: rgba(44, 62, 80, 0.9);
-    z-index: 1000;
-    padding: 1rem 0;
+    background-color: #fff;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 2rem;
+}
+
+nav .logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #0077ff;
 }
 
 nav ul {
     display: flex;
     list-style: none;
+    gap: 1.5rem;
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
+nav ul li a,
+nav ul li .btn-link {
     padding: 0.5rem 1rem;
+    transition: background 0.3s ease;
 }
 
-/* Hero section */
+.btn-link {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #0077ff;
+    font-size: 1rem;
+}
+
+.btn-link:hover {
+    text-decoration: underline;
+}
+
+/* -----------------------------------
+   HERO / PORTADA
+------------------------------------ */
 .hero {
-    height: 100vh;
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
-                url('https://source.unsplash.com/random/1920x1080/?office') center/cover;
-    color: white;
-    display: flex;
-    align-items: center;
+    background: url('../imag/hero.jpg') center/cover no-repeat;
+    padding: 6rem 2rem;
     text-align: center;
-    padding-top: 60px; /* Compensa el header fijo */
-}
-
-.hero .container {
-    width: 100%;
+    color: white;
 }
 
 .hero h1 {
@@ -67,158 +82,246 @@ nav a {
     margin-bottom: 1rem;
 }
 
-/* Botones */
-.btn {
-    display: inline-block;
-    background: #3498db;
-    color: white;
-    padding: 0.8rem 1.8rem;
-    border-radius: 50px;
-    text-decoration: none;
-    margin-top: 1rem;
-    transition: all 0.3s;
+.hero p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
 }
 
-.btn:hover {
-    background: #2980b9;
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
 }
-/* Galería Dedicada */
+
+/* Botones */
+.btn {
+    background-color: #0077ff;
+    color: rgb(234, 235, 236);
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* -----------------------------------
+   SERVICIOS
+------------------------------------ */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem;
+}
+
+.servicios h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.grid-servicios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.grid-servicios article {
+    background-color: white;
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.grid-servicios img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+/* -----------------------------------
+   GALERÍA
+------------------------------------ */
 .galeria-section {
-    background: #f8f9fa;
-    padding: 5rem 0;
+    background-color: #eee;
+    padding: 3rem 2rem;
+}
+
+.galeria-section h2 {
+    text-align: center;
 }
 
 .filtros {
     display: flex;
-    gap: 1rem;
     justify-content: center;
+    gap: 1rem;
     margin: 2rem 0;
 }
 
 .filtro-btn {
-    padding: 0.5rem 1.5rem;
-    border: 2px solid #3498db;
-    background: transparent;
-    color: #3498db;
-    border-radius: 50px;
+    padding: 0.5rem 1.2rem;
+    border: none;
+    border-radius: 20px;
+    background-color: #ccc;
     cursor: pointer;
-    transition: all 0.3s;
+    transition: 0.3s;
 }
 
-.filtro-btn.active, .filtro-btn:hover {
-    background: #3498db;
+.filtro-btn.active,
+.filtro-btn:hover {
+    background-color: #0077ff;
     color: white;
 }
 
 .galeria {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
 }
 
 .galeria-item {
     position: relative;
-    border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-radius: 10px;
 }
 
 .galeria-item img {
     width: 100%;
-    height: 300px;
-    object-fit: cover;
     display: block;
+    transition: transform 0.3s ease;
 }
 
+.galeria-item:hover img {
+    transform: scale(1.05);
+}
+
+/* Overlay cuando se pasa el mouse */
 .overlay {
     position: absolute;
-    bottom: -100%;
+    bottom: 0;
     left: 0;
     right: 0;
-    background: rgba(52, 152, 219, 0.9);
+    background: rgba(0, 0, 0, 0.6);
     color: white;
-    padding: 1.5rem;
-    transition: bottom 0.3s;
+    padding: 1rem;
     text-align: center;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
 }
 
 .galeria-item:hover .overlay {
-    bottom: 0;
+    transform: translateY(0);
 }
 
-/* Modal */
+/* -----------------------------------
+   MODAL DE CONTACTO
+------------------------------------ */
 .modal {
     display: none;
     position: fixed;
-    z-index: 2000;
-    left: 0;
     top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.8);
+    background: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
 }
 
 .modal-contenido {
     background: white;
-    margin: 10% auto;
     padding: 2rem;
+    border-radius: 10px;
     width: 90%;
     max-width: 500px;
-    border-radius: 8px;
     position: relative;
-    animation: modalopen 0.5s;
-}
-
-@keyframes modalopen {
-    from { opacity: 0; transform: translateY(-50px); }
-    to { opacity: 1; transform: translateY(0); }
 }
 
 .cerrar-modal {
     position: absolute;
-    right: 1.5rem;
     top: 1rem;
-    font-size: 2rem;
+    right: 1rem;
+    font-size: 1.5rem;
     cursor: pointer;
 }
 
-/* Lightbox */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* -----------------------------------
+   LIGHTBOX
+------------------------------------ */
 .lightbox {
     display: none;
     position: fixed;
-    z-index: 2000;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.9);
-    top: 0;
-    left: 0;
+    z-index: 30;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .lightbox img {
     max-width: 90%;
-    max-height: 80%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    max-height: 80vh;
+    border-radius: 10px;
 }
 
 .lightbox-caption {
-    position: absolute;
-    bottom: 5%;
-    left: 50%;
-    transform: translateX(-50%);
     color: white;
-    text-align: center;
+    margin-top: 1rem;
 }
 
 .cerrar-lightbox {
     position: absolute;
     top: 2rem;
     right: 2rem;
+    font-size: 2rem;
     color: white;
-    font-size: 3rem;
     cursor: pointer;
+}
+
+/* -----------------------------------
+   PIE DE PÁGINA
+------------------------------------ */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #222;
+    color: white;
+    font-size: 0.9rem;
+}
+
+/* -----------------------------------
+   MEDIA QUERIES (RESPONSIVE)
+------------------------------------ */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
 }
