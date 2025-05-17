@@ -11,7 +11,7 @@ El objetivo es construir una landing page moderna, responsiva e interactiva, que
 
 ## 🔗 Demo en línea
 
-[Ver sitio alojado en el servidor institucional](https://teclab.uct.cl/~nicolas.huenchual/index.html)
+[Ver sitio alojado en el servidor institucional](https://teclab.uct.cl/~nicolas.huenchual/LandingpageJs/)
 
 ## 🔗 Repositorio en GitHub
 
